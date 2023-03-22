@@ -1,0 +1,48 @@
+import random
+Cchoice=["Rock","Paper","Scissor"]
+while True:
+    print("Rock Paper Scissor game:")
+    userscore,computerscore=0,0
+    for i in range(1,6):
+        print("Round",i,"Start:")
+        print("Please select any option:")
+        print("1.Rock","2.Paper","3.Scissors",sep="\n")
+        yourchoice=int(input())
+        if yourchoice==1:
+            print("you select Rock")
+            yourchoice="Rock"
+        elif yourchoice==2:2
+            print("you select Paper")
+            yourchoice="Paper"
+        elif yourchoice==3:
+            print("you select Scissor")
+            yourchoice="Scissor"
+        else:
+            print("Invalid Choice")
+            break
+        computerchoice=random.choice(Cchoice)
+        print("Computer Select",computerchoice)
+        if yourchoice==computerchoice:
+            userscore+=1
+            computerscore+=1
+            print("This Round Is Drawn:")
+        elif (yourchoice=="Paper" and computerchoice=="Rock") or (yourchoice=="Rock" and computerchoice=="Scissor") or (yourchoice=="Scissor" and computerchoice=="Paper"):
+            userscore+=1
+            print("You win this round")
+        else:
+            computerscore+=1
+            print("Computer win this round")
+    if userscore>computerscore:
+        print("You Win This Game:")
+        print("score is:", "Yourscore:", youwin,"ComputerScore:",computerwin)
+    elif computerscore>userscore:
+        print("You Lose the Game, You win the game")
+        print("Score is :","YourScore:", userscore, "ComputerScore:",computerscore,sep="")
+    else:
+        print("Match Drawn")
+        print("Score is :","YourScore:",userscore, "ComputerScore:",computerscore,sep="")
+    user_choice=input("want To Play Again?(yes/exit)")
+    if user_choice=="Yes" or user_choice=="yes" or user_choice=="YES":
+        continue
+    else:
+        break
