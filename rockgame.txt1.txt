@@ -1,7 +1,7 @@
 import random
 Cchoice=["Rock","Paper","Scissor"]
 while True:
-    print("Rock Paper Scissor game:")
+    print("Rock   Paper Scissor game:")
     userscore,computerscore=0,0
     for i in range(1,6):
         print("Round",i,"Start:")
